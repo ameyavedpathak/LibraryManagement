@@ -1,0 +1,20 @@
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LIBRARYDATABASE.mdf
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LIBRARYDATABASE_log.ldf
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LibraryManagement_DataAccess_Layer.dll.config
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LibraryManagement_DataAccess_Layer.dll
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LibraryManagement_DataAccess_Layer.pdb
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\EntityFramework.dll
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\EntityFramework.xml
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\obj\Debug\LibraryManagement_DataAccess_Layer.dll
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\obj\Debug\LibraryManagement_DataAccess_Layer.pdb
+C:\Users\asd\Desktop\C# Projects\LibraryManagement\LibraryManagement_DataAccess_Layer\obj\Debug\LibraryManagement_DataAccess_Layer.csprojResolveAssemblyReference.cache
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LIBRARYDATABASE.mdf
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LIBRARYDATABASE_log.ldf
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LibraryManagement_DataAccess_Layer.dll.config
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LibraryManagement_DataAccess_Layer.dll
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\LibraryManagement_DataAccess_Layer.pdb
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\EntityFramework.dll
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\bin\Debug\EntityFramework.xml
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\obj\Debug\LibraryManagement_DataAccess_Layer.csprojResolveAssemblyReference.cache
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\obj\Debug\LibraryManagement_DataAccess_Layer.dll
+C:\Users\asd\Desktop\Team7_FinalProject\LibraryManagement\LibraryManagement_DataAccess_Layer\obj\Debug\LibraryManagement_DataAccess_Layer.pdb

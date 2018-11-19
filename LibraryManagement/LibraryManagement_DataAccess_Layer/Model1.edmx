@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LIBRARYDATABASEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="LIBRARYDATABASEModelStoreContainer">
+          <EntitySet Name="Book" EntityType="LIBRARYDATABASEModel.Store.Book" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BookCategory" EntityType="LIBRARYDATABASEModel.Store.BookCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BookIssue" EntityType="LIBRARYDATABASEModel.Store.BookIssue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LateFees" EntityType="LIBRARYDATABASEModel.Store.LateFees" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Login" EntityType="LIBRARYDATABASEModel.Store.Login" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Registration" EntityType="LIBRARYDATABASEModel.Store.Registration" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="Book Number" />
+          </Key>
+          <Property Name="Book Number" Type="int" Nullable="false" />
+          <Property Name="Book Name" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Author" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Publication" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Category ID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BookCategory">
+          <Key>
+            <PropertyRef Name="Category ID" />
+          </Key>
+          <Property Name="Category ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Category Name" Type="nchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BookIssue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Student Number" Type="bigint" Nullable="false" />
+          <Property Name="Book Number" Type="int" Nullable="false" />
+          <Property Name="Issued Date" Type="datetime" Nullable="false" />
+          <Property Name="Return Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LateFees">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Student Number" Type="bigint" Nullable="false" />
+          <Property Name="Book Number" Type="int" Nullable="false" />
+          <Property Name="Fine" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Login ID" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Login Type" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="Student Number" />
+          </Key>
+          <Property Name="Student Number" Type="bigint" Nullable="false" />
+          <Property Name="Name" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="E-mail ID" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="Contact Number" Type="bigint" Nullable="false" />
+          <Property Name="Gender" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="LibraryNumber" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LIBRARYDATABASEModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LibraryManagementEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Books" EntityType="LIBRARYDATABASEModel.Book" />
+          <EntitySet Name="BookCategories" EntityType="LIBRARYDATABASEModel.BookCategory" />
+          <EntitySet Name="BookIssues" EntityType="LIBRARYDATABASEModel.BookIssue" />
+          <EntitySet Name="LateFees" EntityType="LIBRARYDATABASEModel.LateFee" />
+          <EntitySet Name="Logins" EntityType="LIBRARYDATABASEModel.Login" />
+          <EntitySet Name="Registrations" EntityType="LIBRARYDATABASEModel.Registration" />
+        </EntityContainer>
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="Book_Number" />
+          </Key>
+          <Property Name="Book_Number" Type="Int32" Nullable="false" />
+          <Property Name="Book_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Author" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Publication" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Category_ID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BookCategory">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Category_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="BookIssue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Student_Number" Type="Int64" Nullable="false" />
+          <Property Name="Book_Number" Type="Int32" Nullable="false" />
+          <Property Name="Issued_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Return_Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="LateFee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Student_Number" Type="Int64" Nullable="false" />
+          <Property Name="Book_Number" Type="Int32" Nullable="false" />
+          <Property Name="Fine" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Login_ID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Login_Type" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="Student_Number" />
+          </Key>
+          <Property Name="Student_Number" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="E_mail_ID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="Contact_Number" Type="Int64" Nullable="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="LibraryNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LIBRARYDATABASEModelStoreContainer" CdmEntityContainer="LibraryManagementEntities">
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="LIBRARYDATABASEModel.Book">
+              <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="Book_Number" ColumnName="Book Number" />
+                <ScalarProperty Name="Book_Name" ColumnName="Book Name" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Publication" ColumnName="Publication" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category ID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookCategories">
+            <EntityTypeMapping TypeName="LIBRARYDATABASEModel.BookCategory">
+              <MappingFragment StoreEntitySet="BookCategory">
+                <ScalarProperty Name="Category_ID" ColumnName="Category ID" />
+                <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookIssues">
+            <EntityTypeMapping TypeName="LIBRARYDATABASEModel.BookIssue">
+              <MappingFragment StoreEntitySet="BookIssue">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Student_Number" ColumnName="Student Number" />
+                <ScalarProperty Name="Book_Number" ColumnName="Book Number" />
+                <ScalarProperty Name="Issued_Date" ColumnName="Issued Date" />
+                <ScalarProperty Name="Return_Date" ColumnName="Return Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LateFees">
+            <EntityTypeMapping TypeName="LIBRARYDATABASEModel.LateFee">
+              <MappingFragment StoreEntitySet="LateFees">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Student_Number" ColumnName="Student Number" />
+                <ScalarProperty Name="Book_Number" ColumnName="Book Number" />
+                <ScalarProperty Name="Fine" ColumnName="Fine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="LIBRARYDATABASEModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login_ID" ColumnName="Login ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login_Type" ColumnName="Login Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registrations">
+            <EntityTypeMapping TypeName="LIBRARYDATABASEModel.Registration">
+              <MappingFragment StoreEntitySet="Registration">
+                <ScalarProperty Name="Student_Number" ColumnName="Student Number" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="E_mail_ID" ColumnName="E-mail ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Contact_Number" ColumnName="Contact Number" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="LibraryNumber" ColumnName="LibraryNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

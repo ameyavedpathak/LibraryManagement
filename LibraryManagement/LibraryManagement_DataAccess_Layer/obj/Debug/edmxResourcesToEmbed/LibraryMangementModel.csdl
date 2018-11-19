@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LIBRARYDATABASEModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LibraryManagementEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Books" EntityType="LIBRARYDATABASEModel.Book" />
+    <EntitySet Name="BookCategories" EntityType="LIBRARYDATABASEModel.BookCategory" />
+    <EntitySet Name="BookIssues" EntityType="LIBRARYDATABASEModel.BookIssue" />
+    <EntitySet Name="LateFees" EntityType="LIBRARYDATABASEModel.LateFee" />
+    <EntitySet Name="Logins" EntityType="LIBRARYDATABASEModel.Login" />
+    <EntitySet Name="Registrations" EntityType="LIBRARYDATABASEModel.Registration" />
+  </EntityContainer>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="Book_Number" />
+    </Key>
+    <Property Name="Book_Number" Type="Int32" Nullable="false" />
+    <Property Name="Book_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Author" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Publication" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Category_ID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookCategory">
+    <Key>
+      <PropertyRef Name="Category_ID" />
+    </Key>
+    <Property Name="Category_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Category_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="BookIssue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_Number" Type="Int64" Nullable="false" />
+    <Property Name="Book_Number" Type="Int32" Nullable="false" />
+    <Property Name="Issued_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Return_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="LateFee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_Number" Type="Int64" Nullable="false" />
+    <Property Name="Book_Number" Type="Int32" Nullable="false" />
+    <Property Name="Fine" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Login_ID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Login_Type" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="Student_Number" />
+    </Key>
+    <Property Name="Student_Number" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="E_mail_ID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="Contact_Number" Type="Int64" Nullable="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="LibraryNumber" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

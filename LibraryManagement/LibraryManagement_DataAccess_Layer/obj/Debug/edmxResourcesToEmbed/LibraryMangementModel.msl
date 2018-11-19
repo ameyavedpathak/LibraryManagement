@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LIBRARYDATABASEModelStoreContainer" CdmEntityContainer="LibraryManagementEntities">
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="LIBRARYDATABASEModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="Book_Number" ColumnName="Book Number" />
+          <ScalarProperty Name="Book_Name" ColumnName="Book Name" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Publication" ColumnName="Publication" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookCategories">
+      <EntityTypeMapping TypeName="LIBRARYDATABASEModel.BookCategory">
+        <MappingFragment StoreEntitySet="BookCategory">
+          <ScalarProperty Name="Category_ID" ColumnName="Category ID" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookIssues">
+      <EntityTypeMapping TypeName="LIBRARYDATABASEModel.BookIssue">
+        <MappingFragment StoreEntitySet="BookIssue">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Student_Number" ColumnName="Student Number" />
+          <ScalarProperty Name="Book_Number" ColumnName="Book Number" />
+          <ScalarProperty Name="Issued_Date" ColumnName="Issued Date" />
+          <ScalarProperty Name="Return_Date" ColumnName="Return Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LateFees">
+      <EntityTypeMapping TypeName="LIBRARYDATABASEModel.LateFee">
+        <MappingFragment StoreEntitySet="LateFees">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Student_Number" ColumnName="Student Number" />
+          <ScalarProperty Name="Book_Number" ColumnName="Book Number" />
+          <ScalarProperty Name="Fine" ColumnName="Fine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="LIBRARYDATABASEModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Login_ID" ColumnName="Login ID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login_Type" ColumnName="Login Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="LIBRARYDATABASEModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="Student_Number" ColumnName="Student Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="E_mail_ID" ColumnName="E-mail ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact Number" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="LibraryNumber" ColumnName="LibraryNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
